@@ -1,0 +1,40 @@
+Задача: разработать консольное приложение и модуль ядра
+Функционал
+Консольное приложение в момент запуска через аргументы командной строки получает один или более идентификаторов процессов, передаёт каждый из них в модуль ядра и от него получает для каждого идентификатора следующую информацию:
+1. Идентификатор пользователя, от имени которого запущен процесс.
+2. Путь к исполняемому файлу процесса.
+3. Командная строка запуска (желательно, но не обязательно).
+Консольное приложение распечатываем полученную информацию и завершает работу.
+Консольное приложение должно быть реализовано на языке C, компилятор: gcc, система сборки: cmake.
+ОС: Ubuntu. Ядро ОС: >= 5.15
+Способ взаимодействия между приложением и модулем ядра — любой.
+
+Примечание:
+Перечисленную информацию о процессе легко получить без использования модуля ядра, но нужно это реализовать именно с помощью модуля ядра — в этом суть задачи.
+
+Решение:
+выполните:
+chmod +x  setup_and_test.sh
+sudo ./setup_and_test.sh
+Скрипт сам создаст все необходимые файлы проекта и проведет тестирование
+
+
+Task: to develop a console application and a kernel module
+Functionality
+At the moment of startup, the console application receives one or more process identifiers via command line arguments, passes each of them to the kernel module and from it receives the following information for each identifier:
+1. The identifier of the user on whose behalf the process is running.
+2. The path to the process's executable file.
+3. The startup command line (desirable, but not required).
+The console application prints the received information and terminates.
+Console application should be implemented in C language, compiler: gcc, build system: cmake.
+OS: Ubuntu. OS kernel: >= 5.15
+The way of interaction between the application and the kernel module is any.
+
+Note:
+The listed information about the process can be easily obtained without using the kernel module, but it is the kernel module that needs to be implemented - this is the crux of the problem.
+
+Solution:
+Execute:
+chmod +x setup_and_test.sh
+sudo ./setup_and_test.sh
+The script itself will create all the necessary project files and perform testing
